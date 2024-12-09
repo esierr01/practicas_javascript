@@ -1,14 +1,18 @@
 
 # Prácticas de JavaScript
 
-Canales: Usko - Victor Robles
+Canales fuentes: 
+- UskoKruM2010
+- Victor Robles WEB
 
 
+## Clonación de Repositorio
 
-
-## Installation
-
+```bash
 git clone https://github.com/esierr01/practicas_javascript.git
+```
+
+## Instrucciones
 
 ```bash
   cd practicas_javascript
