@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CURSO JAVASCRIPT</title>
+</head>
+<body>
+    <h1>Operadores comparativos</h1>
+    
+    <script>
+        document.write(5 > 3);  // debe imprimir True
+        document.write("<br>");
+        document.write(5 == 5); // debe imprimir True // aqui doble igual es una comparación de igualdad
+        // pero para js es mejor usar === que compara dimensión, valor y tipo de dato
+        document.write("<br>");
+
+        // ejemplo porque es bueno usar triple igual
+        document.write(8 == "8");   // da True a pesar de que son variables de tipo diferente, pero contienen un 8
+
+        document.write("<br>");
+
+        // ahora lo hacemos con triple igual
+        document.write(8 === "8");   // da False a pesar de que las dos tienen 8, pero una es entero la otra es string
+
+        document.write("<br>");
+
+        // ahora lo hacemos con diferente
+        document.write(8 != 8);   // da False porque pregunta si 8 es diferente a 8
+
+        document.write("<br>");
+
+        // ahora lo hacemos con triple diferente
+        document.write(8 !== 8);   // da False porque pregunta si 8 es diferente a 8, incluyendo verificacion de tipo
+
+        document.write("<br>");
+
+        document.write(8 !== "8");   // da True porque pregunta si 8 es diferente a 8, incluyendo verificacion de tipo
+
+        document.write("<br>");
+
+        document.write(8 < 16);   // da True porque pregunta si 8 es menor a 16
+
+    </script>
+</body>
+</html>

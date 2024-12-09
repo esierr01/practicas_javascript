@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CURSO JAVASCRIPT</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <h1>Manejo de fechas</h1>
+    
+    <script>
+       var fecha = new Date();
+
+       document.write(fecha + "<br>");
+       document.write(fecha.toDateString() + "<br>");
+       // UTC = Universal Time Coordinated -- Tiempo Universal Coordinado
+       document.write(fecha.toUTCString() + "<br>");
+       document.write(fecha.getDate() + "<br>");
+       document.write((fecha.getMonth() +  1) + "<br>");    // al mes hay que añadirle un 1, porque comienza en 0
+       document.write(fecha.getFullYear() + "<br>");
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CURSO JAVASCRIPT</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <h1>Función Math.ramdom()</h1>
+
+    <script>
+        // ramdom:valor aleatorio desde (inclusivo) cero hasta 1 (exclusivo)
+        /*
+        console.log(Math.random());
+
+        console.log("Un ejemplo, con for");
+        for (let x=0; x <= 100; x++) {
+            console.log(Math.random());
+        }
+        */
+
+        
+        const generar_aleatorio = (min, max) => {
+            return Math.floor(Math.random() * (max-min)) + min;
+        }
+        for (let x=0; x <= 100; x++) {                  // aqui generamos valores aleatorios entre 10 y 20, 
+            console.log(generar_aleatorio(10,20));      // con la función creada
+        }
+    </script>
+</body>
+
+</html>

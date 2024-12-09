@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CURSO JAVASCRIPT</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <h1>Funciones Flecha</h1>
+        
+    <script>
+        const elevarCuadrado2 = (num) => {
+            return num * num;
+        }
+        console.log("Ahora (7) con función flecha --> " + elevarCuadrado2(7));
+
+        console.log("Otra forma de expresarlo...")
+
+        const elevarCuadrado3 = num => {    // como es un solo número podemos omitir los parentesis
+            return num * num;
+        }
+        console.log("Ahora (4) con función flecha --> " + elevarCuadrado3(4));
+
+        console.log("Otra forma de expresarlo, más reducido...")
+
+        const elevarCuadrado4 = num => num * num;
+        console.log("Ahora más reducido --> " + elevarCuadrado4(9));
+
+        console.log("Otra forma de expresarlo, más reducido...")
+
+        const sumar = (n1, n2) => n1 + n2;
+        console.log("Función flecha para hacer una suma --> " + sumar(15, 15));
+
+        /*
+            Las funciones flechas, funcionan para estos casos, pero no cuando están dentro de un objeto
+        */
+    </script>       
+</body>
+</html>

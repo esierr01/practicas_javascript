@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CURSO JAVASCRIPT</title>
+</head>
+<body>
+    <h1>Propiedades de la ventana</h1>
+    
+    <script>
+        // Salen propiedades de la ventana del navegador
+        // windows es un objeto
+        for (var propiedad in window) {
+            document.write(propiedad + "<br>")
+        }
+
+        document.write("***************** Otro Caso *************** <br>");
+
+        // 
+        for (var propiedad in window) {
+            document.write(propiedad + " = " + window[propiedad] + "<br>");
+        }
+    </script>
+</body>
+</html>

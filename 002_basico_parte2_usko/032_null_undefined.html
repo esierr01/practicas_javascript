@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CURSO JAVASCRIPT</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <h1 id="titulo">Diferencia entre Null y Undefined</h1>
+    
+    <script>
+        /*
+        null se usa para representar la ausencia intencional de un valor de objeto y es un valor primitivo.
+        Es una objeto que indica que una variable ha sido explicitamente asignada como "sin valor"
+        */
+        console.log(typeof null);   // null es un objeto
+
+        var prueba = null;
+        console.log(prueba === null);
+
+        /*
+        undefined se usa para indicar la ausencia de un valor asignado. Es una propiedad o valor global
+        */
+        console.log(typeof undefined);      // undefined es una propiedad indefinida
+
+        console.log(null == undefined);     // va a dar true, ya que desde el pto de vista de igualdad, ambos representan que no hay un valor
+        console.log(null === undefined);    // va a dar false, ya que no null representa que no hay un valor, y undefined representa que falta un valor
+
+        // un ejemplo de undefined
+        var nombre;
+        console.log(nombre);                // indica undefined, ya que la variable no tiene un valor asignado
+
+        // otro ejemplo
+        console.log(window.undefined);      // window objeto global del documento, para ver si es una propiedad global del documento
+    </script>       
+</body>
+</html>

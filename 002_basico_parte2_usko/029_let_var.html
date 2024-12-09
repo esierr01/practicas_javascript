@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CURSO JAVASCRIPT</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <h1>Declaración de variables (let y var)</h1>
+    
+    <script>
+        // Especificaciones introduccidas en el lenguaje para declarar variables
+
+        // var es una declaración ambigua, ya que no define el alcance de las variables
+        var edad;
+        var nombre = "Pedro";
+
+        // ejemplo
+        var a = 5;      // su alcance es dentro de todo el bloque del script
+        let c = 11;
+        if (a) {
+            console.log(a);
+            console.log(c);     // se puede visualizar, porque se definio en un nivel más arriba del if, si se puede utilizar
+            c = 35;
+            console.log(c);
+            var a = 10;         // sobreescribimos su valor
+            let b = 21;         // declaramos la variable dentro del if (unicamente) con let
+            console.log(a);
+            console.log(b);
+        }
+        console.log(a);
+        console.log(b);     // indica que esta variable no esta definida ya que al haberla declarada dentro del if, solo disponible alli
+
+
+    </script>       
+</body>
+</html>

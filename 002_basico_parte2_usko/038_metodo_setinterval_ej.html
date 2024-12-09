@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CURSO JAVASCRIPT</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <h1>Método SetInterval (práctica con Slider)</h1>
+    
+    <img id="slider" width="1120" height="630">
+
+    <script>
+        window.addEventListener('load', function () {  // monitoreamos que la página se carga
+            console.log("Documento cargado !!");
+            const slider = document.getElementById("slider"); // almaceno el objeto slider en una constante
+
+            const imagenes = ["fondo1.jpg", "fondo2.jpg", "fondo3.jpg"]
+            index_img = 0;
+
+            const cambiarImagenes = function () {
+                //slider.src = "./img/fondo1.jpg";
+                slider.src = `img/${imagenes[index_img]}`; 
+                if (index_img < (imagenes.length - 1)) {
+                    index_img++;
+                } else {
+                    index_img = 0;
+                };
+            };
+            cambiarImagenes();
+            setInterval(cambiarImagenes, 2000);
+        });
+    </script>       
+</body>
+</html>

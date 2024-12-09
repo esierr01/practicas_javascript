@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CURSO JAVASCRIPT</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <h1>Operador Spread</h1>
+    
+    <script>
+       const numeros3 = [98, 72, 12];   // arreglos de números
+       const numeros4 = [18,...numeros3, 45, 46, 47]; // aqui hacemos una copia independiente del primer arreglo con spread, pero la modificamos, agregandole un número adelanta y tres atras
+
+       console.log(numeros3);
+       console.log(numeros4);
+       numeros4.push(2);
+       console.log(numeros3);
+       console.log(numeros4);   // ahora si es diferente al numeros3
+    </script>
+</body>
+
+</html>

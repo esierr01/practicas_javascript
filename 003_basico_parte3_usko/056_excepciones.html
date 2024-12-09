@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CURSO JAVASCRIPT</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <h1>Excepciones (Errores)</h1>
+
+    <script>
+        //funcionNoDefinida();    // si llamamos esta función nos da un error (no controlado), esto es una excepción
+
+        // la forma de controlar el error es:
+        try {
+            funcionNoDefinida();
+            // console.log("JS");
+        } catch (error) {           // se hay un error lo capturamos
+            console.log(error);
+        } finally {
+            console.log("Terminado");
+        }
+
+        console.log("Otro ejemplo");
+
+        let a = 12, b = 0;
+        try {
+            // personalizamos mensajes de error, si estos ocurren
+            if (b===0){
+                throw new Error('Ha ocurrido un error, no se puede dividir entre cero');
+            }
+            console.log(`Cociente: ${(a/b)}`);
+        } catch (e) {
+            // console.error(e);    // mensaje de error, rojo y con una x encerrada en un circulo
+            // console.warn(e);        // mensaje de error, amarillo, con signo admiración encerrado en un triángulo
+            console.warn(e.message);     // aqui no se muestra el código del error, solo el mensaje pre-definido
+        } finally {
+            console.log("todo se termino");
+        };
+    </script>
+</body>
+
+</html>

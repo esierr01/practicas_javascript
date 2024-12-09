@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CURSO JAVASCRIPT</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <h1>Función Map (para los arrays)</h1>
+    
+    <script>
+        const numeros = [45, 62, 98, 12, 21];
+
+        const numeros_mas_10 = numeros.map(function(val){   // con esta funcion creamos un nuevo arreglo, recorriendo
+            return val + 10;                                // el original con la función map, uno a uno y le sumamos
+        });                                                 // 10 a cada valor    
+        console.log(numeros_mas_10);
+
+        // otro ejemplo uso map
+        console.log("Otro Ejemplo");
+
+        const numeros_elevados = [1, 4, 9, 16, 36];
+
+        // en este caso recorremos el arreglo numeros_elevados con map, uno a uno
+        const raices = numeros_elevados.map(function(x){
+            return Math.sqrt(x);    // retornamos la raiz cuadrada de cada número
+        });
+        console.log(raices);
+
+        console.log("Otro ejemplo");
+
+        // vamos a hacer una función para contar cuantos elementos tiene cada arreglo interno, dentro del arreglo grande
+        const matriz = [[1, 2, 3], [5, 6], [21, 87, 12, 14]];
+
+        const numero_elementos = matriz.map(function(a) {   // con esta función creamos un nuevo arreglo, recorriendo
+            return a.length;                                // el original con la función map, uno a uno y contamos 
+        });                                                 // cuantos elementos tiene cada sub arreglo
+        console.log(numero_elementos);
+    </script>       
+</body>
+</html>

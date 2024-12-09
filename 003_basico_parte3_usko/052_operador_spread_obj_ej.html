@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CURSO JAVASCRIPT</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <h1>Operador Spread</h1>
+
+    <script>
+        const numeros3 = [15, 25, 35];   // arreglos de números
+        const numeros4 = [18, ...numeros3, 45, 46, 47];
+
+        // creamos un objeto a partir del arreglo
+        const objeto = { ...numeros3 };
+
+        console.log(numeros3);
+        console.log(numeros4);
+        numeros4.push(2);
+        console.log(numeros3);
+        console.log(numeros4);   // ahora si es diferente al numeros3
+
+        console.log(objeto)
+
+        const operacion = (n1, n2, n3) => {
+            return n1 + n2 + n3;
+        }
+
+        console.log(operacion(...numeros3));    // usamos spread para pasarle el arrglo con los 3 números, se le pasamos un arreglo con más de 3 números, no dara error, pero solo sumará los 3 primeros números
+    </script>
+</body>
+
+</html>

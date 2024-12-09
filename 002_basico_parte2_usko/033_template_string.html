@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CURSO JAVASCRIPT</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <h1>Template String (Concatenación de cadenas de texto)</h1>
+    
+    <script>
+         const nombre = "Emmanuel";
+         const edad = 51;
+         const pais = "Venezuela";
+
+         // para concatenarlas haciamos así
+         console.log("Mi nombre es: "+nombre+", tengo "+edad+" años de edad y soy de "+pais);
+         // otra forma, usando comillas simples --> pero invertidas (`) o se puede hacer con ALT+96 (teclado númerico)
+         console.log(`Mi nombre es: ${nombre}, tengo ${edad} años de edad y soy de ${pais}`);   // esto es template string
+
+         // otro ejemplo
+         function saludar(nombre) {
+            return `Hola ${nombre}, bienvenido a ProgramadoresHoy`;
+         }
+         console.log(saludar("Diana"));
+    </script>       
+</body>
+</html>

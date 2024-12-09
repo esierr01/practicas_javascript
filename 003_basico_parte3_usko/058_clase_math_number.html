@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CURSO JAVASCRIPT</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <h1>Clases Math y Number: Funciones y constantes númericas en JS</h1>
+
+    <script>
+        // constantes de la clase Math:
+        /*
+        console.log("Constantes de la clase Math");
+        console.log(Math.E);    // Base de logaritmos naturales
+        console.log(Math.LN10);
+        console.log(Math.LN2);
+        console.log(Math.LOG10E);
+        console.log(Math.LOG2E);
+        console.log(Math.PI);   // Constante PI
+        console.log(Math.SQRT1_2);
+        console.log(Math.SQRT2);
+        */
+
+        // constantes de la clase Number:
+        /*
+        console.log("Constantes de la clase Number");
+        console.log(Number.EPSILON);
+        console.log(Number.MAX_SAFE_INTEGER);
+        console.log(Number.MAX_VALUE);
+        console.log(Number.MIN_SAFE_INTEGER);
+        console.log(Number.MIN_VALUE);
+        console.log(Number.NEGATIVE_INFINITY);
+        console.log(Number.POSITIVE_INFINITY);
+        */
+
+        // Métodos de cla clase Math:
+        /*
+        console.log("Métodos de la clase Math");
+        console.log(Math.round(2.3));   // redondeo hacia mayor valor
+        console.log(Math.round(3.1));
+        console.log(Math.round(6.95));
+
+        console.log(Math.ceil(2.05));   // redondeo hacia arriba
+        console.log(Math.ceil(3.83));   
+        console.log(Math.floor(8.94));   // redondeo hacia abajo
+        console.log(Math.floor(-2.31)); 
+        */  
+
+        // redondeo a una cantidad decimal
+        /*
+        let num = 2 / 3;
+        let multiplicador = 1000;   // define la cantidad de decimales, con los ceros del multiplicador / divisor
+
+        let a = Math.round(num*multiplicador)/multiplicador;    // al multiplicar un número y luego dividirlo entre
+        let b = Math.ceil(num*multiplicador)/multiplicador;     // este número le definimos la cantidad de decimales
+        let c = Math.floor(num*multiplicador)/multiplicador;
+        console.log(a);
+        console.log(b);
+        console.log(c);
+        */
+
+        /*
+        let sueldo = 156.97576326;
+        console.log(sueldo.toFixed(4));     // con toFixed se redondea a la cantidad de decimales indicado, se hace un redondeo del último decimal
+        */
+
+        // truncar: quita la parte decimal, deja solo la entera (sin redondear)
+        /*
+        console.log(Math.trunc(2.3));
+        console.log(Math.trunc(-7.1));
+        console.log(Math.trunc(24528324.193));
+        console.log(Math.trunc(-91832423.917));
+        */
+
+        // Potencias y raices
+        /*
+        console.log(Math.pow(5,3));     // potencia, número al exponente
+        console.log(Math.sqrt(36));     // raiz cuadrada de un número
+        */
+
+        // trigonometría
+        console.log(Math.sin(35));
+        console.log(Math.cos(87));
+        console.log(Math.tan(45));
+    </script>
+</body>
+
+</html>

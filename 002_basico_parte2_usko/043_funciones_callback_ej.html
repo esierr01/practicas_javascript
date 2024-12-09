@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CURSO JAVASCRIPT</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <h1>Funciones Callback (llamadas de vuelta)</h1>
+        
+    <h4 id="titulo">Texto</h4>
+    <script>
+        const titulo = document.getElementById('titulo');
+        titulo.innerHTML = "ProgramandoAhora";
+    </script>   
+    
+
+    <!-- Así no lo podemos hacer, porque js esta tratando de cambiar el valor de un objeto antes de que este se cree en el documento html -->
+    <!-- <script>
+        const titulo = document.getElementById('titulo');
+        titulo.innerHTML = "ProgramandoAhora";
+    </script>   
+    
+    <h4 id="titulo">Texto</h4> -->
+    
+</body>
+</html>

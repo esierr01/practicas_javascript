@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CURSO JAVASCRIPT</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <h1>Funciones Flecha</h1>
+        
+    <script>
+        console.log("Ejemplo con función normal:")
+        function elevarCuadrado (numero) {
+            return numero * numero;
+        }
+        console.log("Número 6 elevado al cuadrado --> " + elevarCuadrado(6));
+
+        console.log("Ahora con una función flecha: ")
+
+        const elevarCuadrado2 = (num) => {
+            return num * num;
+        }
+        console.log("Ahora (7) con función flecha --> " + elevarCuadrado2(7));
+    </script>       
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CURSO JAVASCRIPT</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <h1>Objeto global (Promesas)</h1>
+    
+    <script>
+        /*
+        El objeto (promise) promesa es usado para procesamientos asincronos.
+        Se refiere a procesamiento que demoran algún tiempo y que no sabemos si van a estar disponible la respuesta en algún momento o no.
+        Una promesa representa un valor que puede estar disponible ahora, en el futuro o quizas nunca.
+        */
+
+        // resolve para resolver y un reject para rechazar un procesamiento asincrono
+        let promesa = new Promise((resolve, reject) => {
+            //resolve('Éxito en el procesamiento.');
+            reject('Error en el procesamiento.');
+        });
+
+        promesa.then((resultado) => {
+            console.log(resultado);
+        }).catch((error) => {
+            console.log(error);
+        }).finally(() => {
+            console.log("Proceso terminado");
+        });
+    </script>
+</body>
+
+</html>

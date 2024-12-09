@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CURSO JAVASCRIPT</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <h1>Funciones Callback (llamadas de vuelta)</h1>
+        
+    <script>
+        const func1 = (callback) => {   // puede ser otro nombre "callback", aqui es llamada la func1 con una func2 como parametro
+            console.log("Inicio");      // luego ejecutamos código
+            callback();                 // en un momento determinado llamamos es func1 recibida como parametro y la ejecutamos
+            console.log("Fin");         // luego continuamos con la ejecución
+        }
+
+        const func2 = () => {
+            console.log("Proceso Intermedio");
+        }
+
+        func1(func2);
+    </script>       
+</body>
+</html>

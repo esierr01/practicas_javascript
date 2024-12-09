@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CURSO JAVASCRIPT</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <h1>Funciones Callback (llamadas de vuelta)</h1>
+    <br>
+    <label for="num1">Introduzca primer número: </label>
+    <input type="number" id="num1">
+    <br><br>
+    <label for="num2">Introduzca segundo número: </label>
+    <input type="number" id="num2">
+    <br>
+    <button id="btnSumar">
+        Sumar
+    </button>
+
+    <script>
+        // otro ejemplo de uso de callback:
+
+        const sumar = (n1, n2, callback) => {
+            return callback(n1 + n2);
+        };
+
+        // creamos un evento de escucha para el botón al hacerle click
+        document.getElementById('btnSumar').addEventListener('click', () => {
+            let num1 = parseInt(document.getElementById('num1').value);
+            let num2 = parseInt(document.getElementById('num2').value);
+            // llamamos a la función sumar, enviandole los dos números leidos, además una función callback que retorna la suma de los dos números
+            sumar(num1, num2, (res) => {
+                console.log(`El resultado de la suma de ${num1} y ${num2} fue: ${res}`);
+                // console.log('El resultado es: ' + res);
+            });
+        });
+    </script>
+</body>
+
+</html>

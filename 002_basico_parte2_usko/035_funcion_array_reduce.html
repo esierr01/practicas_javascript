@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CURSO JAVASCRIPT</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <h1>Función Reduce (para los arrays)</h1>
+    
+    <script>
+        console.log("Caso 1 - Uso Reduce");
+        const arreglo = [10, 20, 30, 40];
+        // esta función reduce, hace un recorrido por el arreglo, eavluando las posiciones (1 y 2), en este caso suma posición 1 y 2, el resultado se guarda en acu y lo suma al 3er valor (valorSiguiente) y asi hasta terminar
+        const reductor = arreglo.reduce(function(valorAnterior, valorSiguiente) {
+            return valorAnterior + valorSiguiente;
+        });
+        console.log(reductor);
+
+        console.log("Caso 2 - Uso Reduce, sumando 10 como valor inicial");
+        const arreglo2 = [10, 31, 100, 5];
+        const reductor2 = arreglo2.reduce(function (valorAnterior, valorSiguiente) {
+            return valorAnterior + valorSiguiente;
+        }, 10);     // colocando el 10 aqui, le decimos que no va a comenzar desde 0, sino que va a tener un valor inicial 
+        console.log(reductor2);
+
+    </script>       
+</body>
+</html>

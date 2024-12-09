@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CURSO JAVASCRIPT</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <h1>JSON (JavaScript Object Notation)</h1>
+
+    <script>
+        // json se utilizar para transmitir datos entre páginas web, usando comunmente en API's
+        // un json es un string, una cadena de texto
+
+        // esto es una object
+        const objeto = { nombre: "Oscar", edad: 45 };
+        console.log(objeto);
+        console.log(typeof(objeto));
+
+        /*
+        Para convertir a JSON
+        parse() -> Acepta una cadena JSON como parámetro y devuelve el objeto JS correspondiente.
+        stringify() -> Acepta un objeto como parámetro y devuelve la cadena JSON correspondiente.
+        */
+        console.log("Ahora a convertir un obj a JSON");
+
+        const jsonString = JSON.stringify(objeto);
+        console.log(jsonString);
+        console.log(typeof(jsonString));
+
+        console.log("Ahora a convertir de JSON a un objeto de JS");
+
+        const jsonObject = JSON.parse(jsonString);
+        console.log(jsonObject);
+        console.log(typeof(jsonObject));
+
+        // Ahora dentro de un objeto una lista de elementos
+        console.log("Con un objeto con lista de elementos");
+
+
+        const youtuber = {
+            canal: "FormandoProgramadores",
+            pais: "Venezuela", 
+            cursos: ["JavaScript", "Python", "Lógica de Programación", "Html / CSS"]
+        };
+        const youtuberJSON = JSON.stringify(youtuber);
+        console.log(youtuberJSON);
+        console.log(typeof(youtuberJSON));
+    </script>
+</body>
+
+</html>

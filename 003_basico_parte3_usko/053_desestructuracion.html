@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CURSO JAVASCRIPT</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <h1>Desestructuración</h1>
+
+    <script>
+        // expresión de js que permite desempaquetar valores de arreglos o propiedades de objetos en distintas variables o constantes
+
+        // asignación separada de la declaración:
+        let a, b;
+        [a, b] = [10, 20];
+        console.log(a);
+        console.log(b);
+
+        console.log("Otro Ejemplo");
+
+        // asignar el resto de un arreglo a una variable
+        let c, d, rest;
+        [c, d, ...rest] = [56, 81, 92, 103, 41, 17, 28];
+        // en esta asignación asignamos a c=56, d=81 y a rest (con el operador spread) = [92, 103, 41, 17, 28]
+        console.log(c);
+        console.log(d);
+        console.log(rest);
+
+        console.log("Otro Ejemplo");
+
+        let [e, f] = [16, {a:81}, true, "Texto"];
+        // al hacer la asignación así se asigna e = 16 y f = {1:81} -> solo se asignan los dos primeros elementos
+        console.log(e);
+        console.log(f);
+
+        console.log("Otro Ejemplo");
+
+        // asignación básica de variables
+        const lenguajes = ['Python', 'Kotlin', 'JavaScript'];
+        let [len1, len2, len3] = lenguajes;
+        console.log(len1);
+        console.log(len2);
+        console.log(len3);
+    </script>
+</body>
+
+</html>

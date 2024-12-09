@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CURSO JAVASCRIPT</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <h1>Async y Await</h1>
+    
+    <script>
+        // primero creamos una promesa
+        const sumar = (num1, num2) => {
+            return new Promise((res, rej) => {
+                setTimeout(() => {
+                    let suma = num1 + num2;
+                    if (suma > 100) {
+                        res(suma);
+                    } else {
+                        rej('Error al procesar datos !');
+                    }
+                }, 2000);
+            });
+        };
+
+        // Asi queda como una promesa pendiente
+        // const llamarFuncion = () => {
+        //     const res = sumar(56, 78);
+        //     console.log(`Resultado -> ${res}`)
+        // }
+        // para evitarlo se usa async y await, la volvemos en una función asincrona
+
+        const llamarFuncion = async() => {
+            try {
+                const res = await sumar(56, 18);
+                console.log(`Resultado -> ${res}`);
+            } catch(e) {
+                console.log(`Error: ${e}`)
+            };
+        }
+
+        llamarFuncion();
+    </script>
+</body>
+
+</html>

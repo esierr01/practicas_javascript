@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CURSO JAVASCRIPT</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <h1>Desestructuración</h1>
+
+    <script>
+        let g = 1, h = 3;
+        console.log(g);
+        console.log(h);
+
+        // intercambiamos valores
+        [g, h] = [h, g];
+        console.log(g);
+        console.log(h);
+
+        console.log("Otro Caso");
+
+        // analizar un arreglo devuelto por una función
+        const devolverValores = () => {     //función que retorna 3 valores
+            return [1, 2, 3];
+        }
+        let [i, j, k] = devolverValores();
+        console.log(i);
+        console.log(j);
+        console.log(k);
+
+        console.log("Otro Caso");
+
+        let l, m;
+        [l = 5, m = 7] = [1];   // l se le asigno el primer valor del arreglo, pero m agarra su valor defecto, ya que el arreglo no tiene otro valor
+        console.log(l);
+        console.log(m);
+
+        console.log("Otro Caso");
+
+        // tenemos un objeto
+        const usuario = {
+            id: 18,
+            nombre: "FormandoProgramadores",
+            estaLogeado: true
+        };
+
+        let {id, nombre, estaLogeado} = usuario;    // se deestructura el objeto en estas 3 variables
+
+        console.log(id);
+        console.log(nombre);
+        console.log(estaLogeado);
+
+        console.log("Otro Caso");
+
+        // asignación sin declaración de un objeto
+        let n, o;
+        ({n,o} = {n: 18, o: false});    // el objeto {n: 18, o: false} no esta declarado, sino que lo tenemos aqui directamente
+        console.log(n);
+        console.log(o);
+
+        console.log("Otro Caso");
+
+        // Rest en la desestructuración de objetos
+        let {p, q, ...objeto} = {p: 10, q: 35, x: 120, y: 45};
+
+        console.log(p)
+        console.log(q)
+        console.log(objeto)
+    </script>
+</body>
+
+</html>

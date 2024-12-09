@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CURSO JAVASCRIPT</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <h1>Fetch API</h1>
+    
+    <script>
+        const relizarPeticion = async() => {
+            // aqui indicamos la ruta desde la que deseamos recuperar los recursos (jasonplaceholder -> https://jsonplaceholder.typicode.com/), esta página retorna respuestas en formato json
+            const res = await fetch('https://jsonplaceholder.typicode.com/users'); // con esto hacemos una petición de los datos hacia esta url (API)
+            // uno de los codigo de respuesta (status: 200) es que todo fue bien, dentro de body estan todos los datos, pero hay que convertirlos
+
+            const data = await res.json();
+            console.log(data);
+        }
+
+        relizarPeticion();
+    </script>
+</body>
+
+</html>

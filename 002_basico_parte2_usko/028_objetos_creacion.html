@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CURSO JAVASCRIPT</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <h1>Creación de objetos</h1>
+    
+    <script>
+        /*
+        Un objeto es un grupo de valores.
+        A diferencia de los arreglos, podemos tener algunas ventajas adicionales al usarlos como asignar
+        nuestras propias llaves personalizadas para referenciar valores
+        */
+
+        mi_objeto = {}; // asi declaramos un  objeto, se parece a un diccionario en python
+
+        persona1 = {apellidos: "Garcia Pereira", nombres: "Oscar", edad: 30};    // otro objeto
+        console.log(persona1.apellidos);
+
+        // Otra forma
+        persona2 = {
+            apellidos: "Paz Cabrera",
+            nombres: "Lucas",
+            edad: 18
+        };
+        console.log(persona2.nombres);
+        persona2.nombres = "Ana";
+        console.log(persona2.nombres);
+
+        // Comparación con un arreglo, aqui se trabaja con la posición
+        var lenguajes = ["PHP", "Python", "JAVA", "Ruby"];
+        console.log(lenguajes[2]);
+    </script>       
+</body>
+</html>

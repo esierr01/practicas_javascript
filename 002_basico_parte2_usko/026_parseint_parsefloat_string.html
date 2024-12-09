@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CURSO JAVASCRIPT</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <h1>parseInt(), parseFloat(), String()</h1>
+    
+    <script>
+       // funciones para la conversión de datos
+       var numero = "5";
+       var decimal = "56.7"
+       var edad = 25;
+
+       document.write((parseInt(numero) * 6) + "<br>");     // con parseInt se convierte la cadena, siempre que contenga un número, lo pasa a entero
+
+       document.write((parseFloat(decimal) * 10) + "<br>")  // con parseFloat se convierte la cadena, siempre que contenga un número, lo pasa a float
+
+       document.write(String(edad).length);     // con esto se convirtio (número) 25 a (cadena) "25" y con length se determina la longitud de la cadena
+    </script>
+</body>
+</html>

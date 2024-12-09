@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CURSO JAVASCRIPT</title>
+</head>
+<body>
+    <h1>Condicional Switch</h1>
+    
+    <script>
+        var dia = parseInt(prompt("Ingresa un día (1-7): "))
+
+        switch (dia) {
+            case 1:
+                document.write("<h4>Lunes</h4>")
+                break
+                // con el brake, cancelamos la ejecución del switch
+            case 2:
+                document.write("<h4>Martes</h4>")
+                break
+            case 3:
+                document.write("<h4>Miercoles</h4>")
+                break
+            case 4:
+                document.write("<h4>Jueves</h4>")
+                break
+            case 5:
+                document.write("<h4>Viernes</h4>")
+                break
+            case 6:
+                document.write("<h4>Sabado</h4>")
+                break
+            case 7:
+                document.write("<h4>Domingo</h4>")
+                break
+            default: 
+                document.write("<h4>No es un día válido</h4>")
+        }
+    </script>
+</body>
+</html>

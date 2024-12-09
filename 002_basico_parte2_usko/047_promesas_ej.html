@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CURSO JAVASCRIPT</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <h1>Objeto global (Promesas)</h1>
+    
+    <script>
+        // vamos a simular una petición de dura dos segundos en realizarse
+
+        const contar = (palabra) => {
+            // se retorna una promesa que se encarga se simular una demora de 2 segundos y de hacer un conteo de la longitud de una palabra
+            return new Promise((res, rej) => {
+                setTimeout(() => {
+                    let nLetras = String(palabra).length;
+                    if (nLetras < 20) {
+                        res('Ok');
+                    } else {
+                        rej('Error');
+                    };
+                }, 2000);
+            });
+        };
+
+        let respuesta = contar('programacion');
+
+        respuesta.then((res) => {
+            console.log(res);
+        }).catch((error) => {
+            console.log(error);
+        }).finally(() => {
+            console.log('Todo ha terminado');
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CURSO JAVASCRIPT</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <h1>Operador Spread</h1>
+    
+    <script>
+       const numeros1 = [45, 67, 91];   // arreglos de números
+       const numeros2 = numeros1;       // si modifico el segundo arreglo, el primero tambien se modificará, ya que numeros2 hace una referencia sobre numeros1
+       console.log(numeros1);
+       console.log(numeros2);
+       numeros2.push(103);
+       console.log(numeros1);
+       console.log(numeros2);
+
+       // para evitar esto usamos spread
+       console.log("Ahora usamos spread")
+
+       const numeros3 = [98, 72, 12];   // arreglos de números
+       const numeros4 = [...numeros3];       // con los ... indicamos que es un operador spread, y ahora este arreglo es una copia totalmente independiente
+       console.log(numeros3);
+       console.log(numeros4);
+       numeros4.push(2);
+       console.log(numeros3);
+       console.log(numeros4);   // ahora si es diferente al numeros3
+    </script>
+</body>
+
+</html>

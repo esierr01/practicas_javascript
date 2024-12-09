@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CURSO JAVASCRIPT</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <h1>NaN (Not a Number) y Función Global isNaN()</h1>
+
+    <script>
+        // NaN = Not a Number // No es un número. Cuando una función matemática o una operación matemática en JS no puede retornar un número devuelve el valor NaN en su lugar.
+        console.log(Number.NaN);
+        console.log(NaN);
+        console.log(typeof (NaN));   // es de tipo number
+
+        // para que sirve NaN
+        let variable = "JavaScript";
+        let numero = parseInt(variable);
+        console.log(numero);    // devuelve NaN porque no puede retornar un número
+
+        // la función global isNaN() puede ser usada para verificar si un determinado valor o expresión se evalua como NaN.
+        console.log(isNaN(NaN));
+
+        console.log("Un caso en que puede ser utili la función isNaN()")
+
+        // la función isNaN, verifica primero si es un número, si no lo es trata de convertirlo (mediante un algoritmo especial) y entonces verifica si el valor resultante es NaN
+        let edad;
+        do {    // bucle
+            edad = parseInt(prompt("Ingrese su edad: "));
+        } while (isNaN(edad));       // en este bucle, si ingresa un valor que no sea número, va a dar true y se va a quedar en el bucle
+        console.log("La edad que introdujo fue: " + edad);
+        console.log(`Edad: ${edad} | Tipo: ${typeof(edad)}`);
+    </script>
+</body>
+
+</html>

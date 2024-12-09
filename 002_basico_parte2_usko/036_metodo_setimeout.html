@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CURSO JAVASCRIPT</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <h1>Método SetTimeOut</h1>
+    
+    <script>
+        let seg = 0
+        const conteo = function (ms) {
+
+            setTimeout(function() {     // setimeout es para asignar tiempo fuera, osea una pausa
+                let segundos = (ms / 1000);
+                seg = seg + segundos
+                console.log(`Tiempo transcurrido: ${seg} segundos.`);
+            }, ms);   // 3000 milisegundos = 3 segundos
+        };
+        conteo(3000);
+        conteo(5000);
+        conteo(8000);
+    </script>       
+</body>
+</html>

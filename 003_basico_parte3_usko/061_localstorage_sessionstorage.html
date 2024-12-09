@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CURSO JAVASCRIPT</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <h1>LocalStorage y SessionStorage</h1>
+
+    <script>
+        // LocalStorage y SessionStorage = son una especie de bd que los navegadores proveen / soportan
+        // el objeto Storage = es una API de almacenamiento WEB, nos permite almacenar datos de manera local en el navegador y sin necesidad de realizar alguna conexión a una bd
+
+        // LocalStorage y SessionStorage son propiedades que acceden al objeto Storage
+        // LocalStorage -> almacena la información de forma indefinida o hasta que se limpien los datos del navegador
+        // SessionStorage -> almacena la información hasta que las pestaña del navegador siga abierta
+
+        // para validar si el navegador en uso soporta storage
+        if (typeof(Storage) !== 'undefined') {
+            console.log(Storage);
+            // Asignar elementos: ["PHP", "Python", "Java", "C#", "JavaScript"]
+            let cursos = ["PHP", "Python", "Java", "C#", "JavaScript"];
+            //localStorage.setItem("cursos", cursos);     // esto se almacena como string a pesar de ser un arreglos
+            localStorage.setItem("cursos", JSON.stringify(cursos))  // lo almacena en formato JSON
+            // sessionStorage.setItem("cursos", cursos);     // esto se almacena como string
+            localStorage.canal="ProgramadoresEnFormación";
+
+            // leer elementos almacenados
+            //console.log(localStorage.getItem("cursos"));
+            console.log(JSON.parse(localStorage.getItem("cursos")));
+            console.log(localStorage.cursos);
+            console.log(localStorage.getItem("canal"));
+
+            // eliminar un elemento
+            localStorage.removeItem("canal");
+
+            // eliminar todos los elementos
+            localStorage.clear();
+        } else {
+            alert('Storage no es compatible en este navegador');
+        }
+    </script>
+</body>
+
+</html>

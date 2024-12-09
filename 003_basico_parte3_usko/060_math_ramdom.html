@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CURSO JAVASCRIPT</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <h1>Función Math.ramdom() - Generador de Contraseñas</h1>
+
+    <script>
+        let numeros = "0123456789";
+        let letras = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+        let simbolos = ".?,;-_:¿%$#/()[{}]"
+        let todo = numeros+letras+simbolos;
+        generar_password = (longitud) => {
+            let password = "";
+            for (let x = 0; x < longitud; x++) {
+                let aleatorio = Math.floor(Math.random() * todo.length)
+                password += todo.charAt(aleatorio);               
+            };
+            return password;
+        };
+
+        console.log(generar_password(15));
+        console.log(generar_password(10));
+        console.log(generar_password(20));
+        console.log(generar_password(6));
+    </script>
+</body>
+
+</html>

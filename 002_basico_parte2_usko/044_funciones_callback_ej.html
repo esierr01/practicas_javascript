@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CURSO JAVASCRIPT</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <h1>Funciones Callback (llamadas de vuelta)</h1>
+        
+    <!-- Por esta razon el codigo js siempre se coloca al final -->
+    <script>
+        // para evitar errores ya que el elemento a cambiar esta después de el código js, creamos una función que se ejecutara después de cargada la página completa, usando callback
+
+        window.addEventListener('load', () => {
+            const titulo = document.getElementById('titulo');
+            titulo.innerHTML = "ProgramandoAhora";
+        });        
+    </script>  
+
+    <h4 id="titulo">Texto</h4>
+    
+</body>
+</html>
